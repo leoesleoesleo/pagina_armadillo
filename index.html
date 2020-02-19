@@ -10,8 +10,8 @@
 
   <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url"           content="https://leoesleoesleo.github.io/diario_de_una_chica/" />
-  <meta property="og:type"          content="website" />
+  <meta property="og:url"           content="https://leoesleoesleo.github.io/pagina_armadillo/" />
+  <meta property="og:type"          content="article" />
   <meta property="og:title"         content="Armadillo" />
   <meta property="og:description"   content="Micro Framework hecho en python para ciencia de datos." />
   <meta property="og:image:width"   content="400" />
@@ -35,6 +35,15 @@
 
 </head>
 
+
+<style type="text/css">
+  #code{
+    background-color:#FFFCB9;
+    padding:20px;color:#000;
+    font-size: 70%;
+
+  }
+</style>
 <body>
 
   <!-- Navigation -->
@@ -53,6 +62,9 @@
           </li>
           <li class="nav-item">
             <a style="color: #000;" class="nav-link" href="#documentacion">Documentación</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #000;" class="nav-link" href="#comunidad">Comunidad</a>
           </li>
           <li class="nav-item">
             <a style="color: #000;" class="nav-link" target="_blank" href="https://github.com/leoesleoesleo/armadillo">Descargar</a>
@@ -95,6 +107,11 @@
               Armadillo es una implementación de código abierto construido para aquellas personas que están iniciando en el mundo de la ciencia de datos en el lenguaje python, con métodos rápidos para minar y modelar datos escrita por Leonardo Patiño Rodriguez.
         </p>
       </div>
+
+      <div class="fb-share-button" data-href="https://leoesleoesleo.github.io/pagina_armadillo/" data-layout="button_count" data-size="large">
+              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmartinezvrgs.blogspot.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a>
+      </div>
+
     </div>   
 
     <div class="row">
@@ -103,35 +120,35 @@
         <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
          1. Abra el CMD y cree una carpeta nueva
          </p>
-         <code lang="python" style="background-color:#FFFCB9; padding:20px;color:#000;">
+         <code id="code" lang="python">
               mkdir armadillo && cd armadillo
          </code>   
 
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
          2. Crear un entorno por separado para que corra armadillo. 
          </p>
-         <code lang="python" style="background-color:#FFFCB9; padding:20px;color:#000;">
+         <code id="code" lang="python">
               conda create -n armadillo python=3.6
          </code>  
 
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
          3. Ver entornos, garantice que el entorno se creo de manera correcta. 
          </p>
-         <code lang="python" style="background-color:#FFFCB9; padding:20px;color:#000;">
+         <code id="code" lang="python">
               conda info --envs
          </code>  
 
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
          4. Active el entorno 
          </p>
-         <code lang="python" style="background-color:#FFFCB9; padding:20px;color:#000;">
+         <code id="code" lang="python">
               conda activate preventivo
          </code> 
 
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
          5. navegue hasta la carpeta que creó en el paso 1 e instale las dependencias de armadillo. 
          </p>
-         <code lang="python" style="background-color:#FFFCB9; padding:20px;color:#000;">
+         <code id="code" lang="python">
               pip install  -r requirements.txt
          </code> 
          
@@ -148,7 +165,7 @@
         <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
          1. Arquitectura. 
          </p>
-         <pre lang="python" style="background-color:#B9CAFF; padding:20px;color:#000;">
+         <pre lang="python" style="background-color:#B9CAFF; padding:20px;color:#000;font-size: 70%;">
               db
                         -------------- sql.py
                         -------------- sqlServer.py
@@ -178,47 +195,43 @@
     <div class="row">
       <div class="col-lg-10 col-md-10 mx-auto">
         <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         db:  
+         <strong>db:</strong> Se encuentran las clases y los métodos para acceder a los diferentes motores de datos.
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         clase:  
+         <strong>clase:</strong> Se encuentra la familia de clases para hacer ciencia de datos, como limpieza de datos, análisis, modelos etc. 
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         conexion:  
+         <strong>conexion:</strong> String de conexión para cada motor de datos en formato json 
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         conf:  
+         <strong>conf:</strong>  Clases adicionales de configuración del micro framework
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         dataframe:  
+         <strong>dataframe:</strong> En esta carpeta se encuentra los dataframes que se generan desde los metodos de armadillo. 
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         ficheros:  
+         <strong>ficheros:</strong> En esta carpeta se encuentran todos aquellos ficheros de entrada.  
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         logs:  
+         <strong>logs:</strong>  Logs de error, info, debug, Armadillo deja un log por cada proceso por lo que se facilita bastante a la hora de necesitar un historial u error.
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         api.py:  
+         <strong>api.py:</strong>  Si quieres transformar armadillo a un web service. 
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         datasets.py:  
+         <strong>datasets.py:</strong>  Biblioteca de datasets para probar.
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         info.txt:  
+         <strong>info.txt:</strong>  Información del micro framework.
          </p>
          <p style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 1.5rem;">
-         main.py:  
+         <strong>main.py:</strong>  Este es el archivo princial en donde los usuarios manipularian las diferentes clases y métodos que ofrece armadillo.
          </p>
       </div>
     </div>
 
   </div>  
 
-  <hr>
-
-<div class="fb-share-button" data-href="https://leoesleoesleo.github.io/diario_de_una_chica/" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmartinezvrgs.blogspot.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
- 
   <hr>
   <!-- Documentación -->
   <div id="documentacion" class="container">
@@ -245,6 +258,23 @@
             <h3 class="post-subtitle">
               <strong><span>- </span>Métodos</strong>
             </h3>
+          </a>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comunidad -->
+  <div id="comunidad" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">Comunidad</h2>
+            
+
+
           </a>
         </div>
         <hr>
